@@ -22,6 +22,7 @@ public class CategoriaResource {
 	
 	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) { // ResponseEntity<?> = Tipo especial que encapsula as informaçõles de uma resposta http
+		
 		Categoria obj = service.buscar(id);
 		return ResponseEntity.ok().body(obj);		
 		
