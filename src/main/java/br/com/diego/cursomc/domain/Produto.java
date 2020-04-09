@@ -38,7 +38,7 @@ public class Produto implements Serializable {
 		return lista;
 	}
 
-	@JsonBackReference //Do outro lado ja foram buscados, (eu não busco mais).
+	@JsonIgnore //Do outro lado ja foram buscados, (eu não busco mais).
 	@ManyToMany // Relacionamentos *...*
 	@JoinTable(name = "produto_categoria", // Criação 3 tabela por ser *..* 
 		joinColumns = @JoinColumn(name = "produto_id"),
