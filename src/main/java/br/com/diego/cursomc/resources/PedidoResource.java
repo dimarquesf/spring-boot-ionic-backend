@@ -18,9 +18,8 @@ public class PedidoResource {
 	private PedidoService service; //Acessar Serviço
 	
 	@RequestMapping(value="/{id}", method = RequestMethod.GET)
-	public ResponseEntity<?> find(@PathVariable Integer id) { // ResponseEntity<?> = Tipo especial que encapsula as informaçõles de uma resposta http
-		
-		Pedido obj = service.buscar(id);
+	public ResponseEntity<Pedido> find(@PathVariable Integer id) { // ResponseEntity<?> = Tipo especial que encapsula as informaçõles de uma resposta http
+		Pedido obj = service.find(id);
 		return ResponseEntity.ok().body(obj);		
 		
 	}
