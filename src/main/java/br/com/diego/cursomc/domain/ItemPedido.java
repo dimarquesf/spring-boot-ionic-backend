@@ -32,6 +32,10 @@ public class ItemPedido implements Serializable {
 		this.preco = preco;
 	}
 	
+	public double getSubTotal() {
+		return (preco - desconto) * quantidade;
+	}
+	
 	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido(); // para ter acesso direto fora da classe Item Pedido.class Melhor do que acessar id e depois produto/pedido
