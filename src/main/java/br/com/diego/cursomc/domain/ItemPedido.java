@@ -41,6 +41,10 @@ public class ItemPedido implements Serializable {
 		return id.getPedido(); // para ter acesso direto fora da classe Item Pedido.class Melhor do que acessar id e depois produto/pedido
 	}
 	
+	public void setPedido(Pedido pedido) {
+		id.setPedido(pedido);
+	}
+	
 
 	public Produto getProduto() {
 		return id.getProduto();
@@ -48,6 +52,10 @@ public class ItemPedido implements Serializable {
 
 	public ItemPedidoPK getId() {
 		return id;
+	}
+	
+	public void setProduto(Produto produto) {
+		id.setProduto(produto);
 	}
 
 	public void setId(ItemPedidoPK id) {
