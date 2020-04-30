@@ -1,6 +1,5 @@
 package br.com.diego.cursomc.resources;
 
-import java.net.URL;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
